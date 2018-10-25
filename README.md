@@ -5,6 +5,9 @@ gitconfig
 ~/.gitconfig
 User-specific configuration file. Also called "global" configuration file.
 
+# How to locate the git config file in Mac [duplicate]
+The global Git configuration file is stored at: $HOME/.gitconfig on all platforms.
+
 # why we need it?
 For writing options: write to global ~/.gitconfig file rather than the repository .git/config, write to $XDG_CONFIG_HOME/git/config file if this file exists and the ~/.gitconfig file doesn’t.
 
@@ -29,4 +32,4 @@ For reading options: read only from global ~/.gitconfig and from $XDG_CONFIG_HOM
 <a href="http://twitter.com/LeoLaneseltd" target="_blank">http://twitter.com/LeoLaneseltd</a><br>
 
 # Questions / Suggestion / Recommendation ?<br>
-<a href="mail:to">javascript@leolanese.com</a><br>
+<a href="mail:to">developer@leolanese.com</a><br>

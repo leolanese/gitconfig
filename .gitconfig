@@ -47,9 +47,37 @@
     type = cat-file -t
     dump = cat-file -p
     last = log -1 HEAD
-
+    git_change_to_push=" git diff --stat --patch origin master "
+    git_config=" cat .git/config "
+    git_end_sprint=" git branch | grep -v 'master' | xargs git branch -D "
+    git_merge=" git difftool "
+    git_branch=" git branch -a "
+    git_log=" git log --graph --oneline --all --decorate --color "
+    git_log2=" git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short "
+    git_log3=" git log --pretty=oneline "
+    git_log4=" git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit "
+    git_log5=" git whatchanged -3 -p "
+    git_users=" git log --format='%aN' | sort -u "
+    git_diff=" git log -p "
+    gs='git status '
+    ga='git add '
+    gb='git branch '
+    gc='git commit'
+    gd='git diff'
+    go='git checkout '
+    gk='gitk --all&'
+    gx='gitx --all &'
+    git_i=" git add -i "
+    git_me=" git log --author=LeoLanese "
+    git_remote=" git remote -v "
+    git_clean=" find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch; 
+		git config --global core.excludesfile ~/.gitignore;
+		echo .DS_Store >> ~/.gitignore "
+    git_all_users='git log --format='%aN' | sort -u '
+    git_tasks=' grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null '
+    git_ignore=' find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch {}/.gitignore \; '
+    git_undelete=' git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file" '
+    git_idea=' git rm -r --cached .idea '
     # Show files ignored by git:
     ign = ls-files -o -i --exclude-standard
-
-
 
